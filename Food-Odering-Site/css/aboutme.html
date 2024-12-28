@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #openButton {
+            background-color: #00aaff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            position: relative;
+            z-index: 10;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        #openButton:hover {
+            background-color: #0088cc;
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 20px;
+            text-align: left;
+            background: #262626;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transform-origin: top center;
+            transform: scale(0.8) translateY(0);
+            opacity: 0;
+            transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: 5;
+        }
+
+        .container.active {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .close-button:hover {
+            color: #00aaff;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background-color: #333333;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #ffffff;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .tag:hover {
+            background-color: #00aaff;
+        }
+
+        .tag:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #00aaff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            font-size: 0.8rem;
+            opacity: 0;
+            animation: fadeIn 0.3s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .mern-stack {
+            margin-top: 40px;
+        }
+
+        .mern-stack img {
+            max-width: 50px;
+            margin: 10px;
+        }
+
+        .illustration {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .illustration img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #openButton.active {
+            transform: translateY(50px);
+        }
+    </style>
+</head>
+
+<body>
+    <button id="openButton">About Me</button>
+    <div class="container" id="aboutMe">
+        <button class="close-button" id="closeButton">&times;</button>
+        <div class="header">ABOUT ME</div>
+        <p>I help business owners and busy web developers to design & develop creative websites that fit their vision
+            and attract visitors to stay forever. Technologies and tools that I use to create such awesome websites:</p>
+
+        <div class="tags">
+            <div class="tag" data-tooltip="JavaScript">#javascript</div>
+            <div class="tag" data-tooltip="React.js">#react.js</div>
+            <div class="tag" data-tooltip="Redux">#redux</div>
+            <div class="tag" data-tooltip="Node.js">#node.js</div>
+            <div class="tag" data-tooltip="Express.js">#express.js</div>
+            <div class="tag" data-tooltip="MongoDB">#mongoDB</div>
+            <div class="tag" data-tooltip="Mongoose">#mongoose</div>
+            <div class="tag" data-tooltip="Cloudinary">#cloudinary</div>
+            <div class="tag" data-tooltip="EJS">#ejs</div>
+            <div class="tag" data-tooltip="HTML">#html</div>
+            <div class="tag" data-tooltip="CSS">#css</div>
+            <div class="tag" data-tooltip="Sass">#sass</div>
+            <div class="tag" data-tooltip="Bootstrap">#bootstrap</div>
+            <div class="tag" data-tooltip="Tailwind">#tailwind</div>
+            <div class="tag" data-tooltip="Git">#git</div>
+            <div class="tag" data-tooltip="GitHub">#github</div>
+            <div class="tag" data-tooltip="AWS">#aws</div>
+            <div class="tag" data-tooltip="Terminal">#terminal</div>
+            <div class="tag" data-tooltip="Adobe XD">#adobeXD</div>
+            <div class="tag" data-tooltip="Figma">#figma</div>
+        </div>
+
+        <div class="mern-stack">
+            <h2 class="header">MERN STACK</h2>
+            <div class="logos">
+                <img src="https://raw.githubusercontent.com/mongodb-js/leaf/master/dist/mongodb-leaf_64x64.png"
+                    alt="MongoDB">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" alt="Express.js">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React.js">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js">
+            </div>
+        </div>
+
+        <div class="illustration">
+            <img src="https://via.placeholder.com/500x300" alt="Web Developer Illustration">
+        </div>
+    </div>
+
+    <script>
+        const openButton = document.getElementById('openButton');
+        const closeButton = document.getElementById('closeButton');
+        const aboutMe = document.getElementById('aboutMe');
+
+        openButton.addEventListener('click', () => {
+            aboutMe.classList.add('active');
+            openButton.classList.add('active');
+        });
+
+        closeButton.addEventListener('click', () => {
+            aboutMe.classList.remove('active');
+            openButton.classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>
