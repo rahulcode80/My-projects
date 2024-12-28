@@ -1,0 +1,359 @@
+/* body coding */
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+/* body back-ground color */
+body {
+    background-color: black;
+
+}
+
+/* main section coding */
+.main {
+    background-image: url("images/bg.jpg");
+    background-position: center center;
+    background-size: max(1200, 100vw);
+    background-repeat: no-repeat;
+    height: 70vh;
+    width: 100%;
+    position: relative;
+}
+
+.main .box {
+    height: 70vh;
+    width: 100%;
+    opacity: 0.44;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+
+/* Navigation bar coding */
+nav {
+    max-width: 80vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 74px;
+
+}
+
+nav img {
+    color: red;
+    width: 158px;
+    position: relative;
+    z-index: 10;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+/* Main section code for buttons and displaying messages */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    height: calc(100% - 100px);
+    position: relative;
+    gap: 23px;
+    padding: 0px 30px;
+}
+
+.hero> :nth-child(1) {
+    font-family: 'poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 48px;
+    text-align: center;
+}
+
+.hero> :nth-child(2) {
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+.hero> :nth-child(3) {
+    font-family: 'poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.sepration {
+    height: 7px;
+    background-color: rgb(46, 44, 44);
+    position: relative;
+    z-index: 10;
+    margin-top: 22px;
+}
+
+
+
+/* Buttons coding start here */
+
+.btn {
+    padding: 3px 8px;
+    font-weight: 400;
+    color: white;
+    background-color: rgba(248, 243, 243, 0.021);
+    border-radius: 4px;
+    border: 1px solid white;
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+    padding: 3px 24px;
+    font-size: 22px;
+    border-radius: 4px;
+    font-weight: 400;
+
+}
+
+.btn-red-sm {
+    background-color: red;
+    color: white;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+}
+
+/* Email input section coding */
+.main input {
+    padding: 7px 101px 8px 14px;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(246, 238, 238, 0.5);
+}
+
+/* First section coding Enjoy on Your TV */
+/* This is same for all the sections */
+
+
+.first {
+    display: flex;
+    justify-content: center;
+    max-width: 70vw;
+    margin: auto;
+    color: white;
+    align-items: center;
+}
+
+.secImg {
+    position: relative;
+}
+
+.secImg img {
+    width: 600px;
+    position: relative;
+    z-index: 10;
+
+}
+
+.secImg video {
+    position: absolute;
+    top: 90px;
+    right: 21px;
+    width: 500px;
+}
+
+section.first>div {
+    display: flex;
+    flex-direction: column;
+    padding: 30px, 0px;
+}
+
+section.first>div :nth-child(1) {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+section.first>div :nth-child(2) {
+    font-size: 24px;
+}
+
+/* Seperate coding for third section video(Saif ali khan) */
+#video {
+    width: 398px;
+    height: auto;
+    right: 104px;
+    top: 37px;
+}
+
+/* Frequently Asked Questions coding start here  */
+
+.faq h2 {
+    text-align: center;
+    font-size: 48px;
+
+}
+
+.faq {
+    color: white;
+    background-color: black;
+    padding: 34px;
+}
+
+.faqbox:hover {
+    background-color: #414141;
+    color: white;
+
+}
+
+.faqbox svg {
+    filter: invert(1);
+}
+
+.faqbox {
+    transition: all 0.5s ease-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    max-width: 60vw;
+    margin: 34px auto;
+    background-color: #2d2d2d;
+    cursor: pointer;
+
+}
+
+/* Footer coding here  */
+
+footer {
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    padding: 60px;
+}
+
+footer .questions {
+    padding: 34px 0px;
+    font-size: 34px;
+    text-align: center;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+}
+
+.footer a {
+    color: white;
+    font-size: 17px;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+
+/* Coding for responsiveness */
+
+@media screen and (max-width:1100px) {
+    nav {
+        max-width: 80vw;
+    }
+
+    .first {
+        flex-wrap: wrap;
+    }
+
+    section.first>div :nth-child(1) {
+        font-size: 30px;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    section.first>div :nth-child(2) {
+        text-align: center;
+        font-size: 18px;
+        padding-top: 15px;
+    }
+    footer div .quetions{
+        font-size: 25px;
+    }
+
+
+    .secImg img {
+        width: 345px;
+    }
+
+    .secImg video {
+        width: 270px;
+        top: 50px;
+        right: 30px;
+    }
+
+    #video {
+        width: 230px;
+        top: 27px;
+        right: 60px;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 18px;
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .faq h2 {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    footer {
+        max-width: 90vw;
+        padding: 70px 0;
+    }
+
+    .footer-item {
+        align-items: center;
+    }
+
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+}
