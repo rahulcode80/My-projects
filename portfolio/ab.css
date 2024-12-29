@@ -1,0 +1,103 @@
+
+/* alag hai */
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        .button.hidden {
+            display: none;
+        }
+
+        .modal {
+            overflow: hidden;
+            scroll-behavior: none;
+            z-index: 100;
+            display: none;
+            position:absolute;
+            top: 0;
+            left: 20vw;
+            width: 60%;
+            height: 80vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            z-index: 111;
+            background: white;
+            padding: 20px;
+            position: absolute;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 60%;
+            height: 80vh;
+            /* height: 80vh; */
+            transform-origin: center;
+            animation: growOut 0.5s ease forwards;
+        }
+
+        @keyframes growOut {
+            from {
+                transform: scale(0) translate(var(--button-x), var(--button-y));
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1) translate(0, 0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes shrinkIn {
+            from {
+                transform: scale(1) translate(0, 0);
+                opacity: 1;
+            }
+
+            to {
+                transform: scale(0) translate(var(--button-x), var(--button-y));
+                opacity: 0;
+            }
+        }
+
+        .close {
+            background: #ff5c5c;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 18px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .close:hover {
+            background: #e04e4e;
+            transform: rotate(90deg);
+        }

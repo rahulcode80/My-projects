@@ -1,0 +1,12 @@
+#wrapper-canvas canvas{
+    max-width: 100%;
+}
+#video{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 355px;
+    height: fit-content;
+    overflow: hidden;
+    clip-path: inset(0px 28px 0px 25px);
+}
