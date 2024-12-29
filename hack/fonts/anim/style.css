@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-content {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #005bb5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+.animation {
+    position: relative;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.robotic-image {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.robot-arm {
+    width: 50px;
+    height: 150px;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    animation: moveArm 2s infinite;
+}
+
+.robot-arm.left {
+    left: 20%;
+    transform-origin: top right;
+}
+
+.robot-arm.right {
+    right: 20%;
+    transform-origin: top left;
+}
+
+.anvil {
+    width: 100px;
+    height: 50px;
+    background-color: #555;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes moveArm {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(15deg);
+    }
+}
